@@ -1,4 +1,5 @@
 const { app, BrowserWindow } = require('electron');
+const config = require('./config');
 
 let window;
 
@@ -6,14 +7,14 @@ function createWindow() {
   window = new BrowserWindow({
     width: 800,
     height: 600,
+    autoHideMenuBar: true,
+    alwaysOnTop: true,
     webPreferences: {
       nodeIntegration: true
     }
   });
 
-  window.loadFile('index.html');
-
-  window.webContents.openDevTools();
+  window.loadURL(config.url);
 }
 
 app.whenReady().then(createWindow);
