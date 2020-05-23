@@ -11,7 +11,7 @@ ___
   git clone https://github.com/AugustoMarcelo/electron-floating-browser.git
 
   # install dependencies
-  yarn add
+  yarn
 
   # running
   yarn start
