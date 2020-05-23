@@ -1,3 +1,3 @@
 module.exports = {
-  url: 'https://www.youtube.com/watch?v=YpKNDN-5m7g&list=RDMMh41YqUFMZ_I&index=3'
+  url: 'https://www.youtube.com/embed/WAjRmHODjyQ?list=PLC122061BDC373B4B&autoplay=1'
 }
