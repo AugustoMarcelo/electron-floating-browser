@@ -4,8 +4,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Floating Browser</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      outline: 0;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    .container {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    }
+
+    /* Then style the iframe to fit in the container div with full height and width */
+    .responsive-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    #draggable {
+      -webkit-app-region: drag;
+      width: 90%;
+      height: 32px;
+      position: absolute;
+      left: 10px;
+      top: 0;
+      background-color: transparent;
+    }
+  </style>
 </head>
 <body>
-  
+  <div class="container">
+    <div id="draggable"></div>
+    <iframe class="responsive-iframe" src="https://www.youtube.com/embed/Bqc0FXiazQM?modestbranding=1&autohide=1&showinfo=0&controls=0&autoplay=1&iv_load_policy=3&list=RDMMh41YqUFMZ_I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
 </body>
 </html>

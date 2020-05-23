@@ -5,16 +5,20 @@ let window;
 
 function createWindow() {
   window = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 767,
+    height: 430,
+    frame: false,
     autoHideMenuBar: true,
     alwaysOnTop: true,
+    movable: true,
+    resizable: true,
     webPreferences: {
       nodeIntegration: true
     }
   });
 
-  window.loadURL(config.url);
+  // window.loadURL(config.url);
+  window.loadFile('index.html');
 }
 
 app.whenReady().then(createWindow);
